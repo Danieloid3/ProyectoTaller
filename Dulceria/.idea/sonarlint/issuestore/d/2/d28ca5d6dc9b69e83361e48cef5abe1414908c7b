@@ -1,0 +1,38 @@
+
+k
+java:S11921"IDefine a constant instead of duplicating this literal "Segoe UI" 3 times.(ß¥Œ©ıÿÿÿÿ8Ôˆ—ï1
+j
+java:S1604·"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿJ$f3c7184d-559f-404b-9648-4244d8735785
+¡	java:S116¿"`Rename this field "jButton_IniciarSesion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ì÷èşÿÿÿÿJ$3128105d-6f17-44c4-b93b-301882c5bc23
+˜	java:S116È"WRename this field "txt_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó…ÖüÿÿÿÿJ$00c960c8-49d6-4c84-96b7-7457b4eaf559
+—	java:S116É"VRename this field "txt_usuario" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ÿé¬ûÿÿÿÿJ$c7cee3c7-e941-4d77-99d7-07b0d97b816a
+‡
+java:S1450¿"dRemove the "jButton_IniciarSesion" field and declare it as a local variable in the relevant methods.(×ì÷èşÿÿÿÿ8”ˆ—ï1
+y
+java:S1450À"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8–ˆ—ï1
+y
+java:S1450Á"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ8—ˆ—ï1
+y
+java:S1450Â"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ8˜ˆ—ï1
+t
+java:S1450Ã"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã8šˆ—ï1
+t
+java:S1450Ä"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®8›ˆ—ï1
+y
+java:S1450Å"VRemove the "jLabel6" field and declare it as a local variable in the relevant methods.(¸ôÂøÿÿÿÿ8œˆ—ï1
+y
+java:S1450Æ"VRemove the "jPanel1" field and declare it as a local variable in the relevant methods.(´œ½ÿÿÿÿÿ8ˆ—ï1
+y
+java:S1450Ç"VRemove the "jPanel2" field and declare it as a local variable in the relevant methods.(õ òçüÿÿÿÿ8Ÿˆ—ï1
+~
+java:S1450È"[Remove the "txt_password" field and declare it as a local variable in the relevant methods.(ó…Öüÿÿÿÿ8Ÿˆ—ï1
+}
+java:S1450É"ZRemove the "txt_usuario" field and declare it as a local variable in the relevant methods.(—Ÿé¬ûÿÿÿÿ8 ˆ—ï1
+l
+java:S1197"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿJ$8fa1bd26-d26a-4fc1-9a86-307b24748713
+‚
+java:S2147­"ECombine this catch with the one at line 171, which has the same body.(¨¦Š½J$61b4b67e-49d1-421e-9924-752d90753f0b
+‚
+java:S2147¯"ECombine this catch with the one at line 173, which has the same body.(ã€ J$691c608e-2caa-409a-b78a-bcc5090c569d
+
+java:S2147±"ECombine this catch with the one at line 175, which has the same body.(ñÎ¯%J$e81f8e08-bbd8-4adc-ba1b-67d45650c513
