@@ -2,6 +2,7 @@ package vista;
 
 import controlador.ControllerUsuario;
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import modelo.UsuarioModel;
 
@@ -107,8 +108,19 @@ public class FormLogin extends javax.swing.JFrame {
                 txt_usuarioActionPerformed(evt);
             }
         });
+        txt_usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_usuarioKeyPressed(evt);
+            }
+        });
 
         jLabel6.setText("Contraseña");
+
+        txt_password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_passwordKeyPressed(evt);
+            }
+        });
 
         jButton_IniciarSesion.setBackground(new java.awt.Color(240, 240, 240));
         jButton_IniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -173,6 +185,20 @@ public class FormLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_usuarioActionPerformed
 
+    private void txt_usuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_usuarioKeyPressed
+        
+        if(evt.getKeyCode()== evt.VK_ENTER){
+        txt_password.requestFocus();
+        }
+        
+    }//GEN-LAST:event_txt_usuarioKeyPressed
+
+    private void txt_passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_passwordKeyPressed
+        if(evt.getKeyCode()== evt.VK_ENTER){
+        this.Login();
+        }
+    }//GEN-LAST:event_txt_passwordKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -233,7 +259,10 @@ public class FormLogin extends javax.swing.JFrame {
             usuario.setPassword(txt_password.getText().trim());
             
             if (controladorUsuario.iniciarSesion(usuario)) {
-                JOptionPane.showMessageDialog(null, "Ingreso Correcto");
+                //JOptionPane.showMessageDialog(null, "Ingreso Correcto");
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.setVisible(true);
+                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrecta");
             }
