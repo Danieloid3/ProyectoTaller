@@ -2,9 +2,12 @@
 package vista;
 
 import java.awt.Dimension;
+import javax.swing.JDesktopPane;
 
 public class FormMenuPrincipal extends javax.swing.JFrame {
-
+    
+    
+    public static JDesktopPane jDesktopPaneMenu;
     
     public FormMenuPrincipal() {
         initComponents();
@@ -12,6 +15,14 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
         this.setTitle("Sistema de Inventario - Dulceria");
+        
+        this.setLayout(null);
+        jDesktopPaneMenu = new JDesktopPane();
+        
+        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        this.jDesktopPaneMenu.setBounds(0, 0, ancho, (alto - 110));
+        this.add(jDesktopPaneMenu);
     }
 
     /**
@@ -25,30 +36,30 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem_Nuevo_Usuario = new javax.swing.JMenuItem();
+        jMenuItem_Gestionar_Usuario = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem_Ingresar_Producto = new javax.swing.JMenuItem();
+        jMenuItem_Gestion_Productos = new javax.swing.JMenuItem();
+        jMenuItem_Actualizar_Stock = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem_Ingresar_Categoria = new javax.swing.JMenuItem();
+        jMenuItem_Gestionar_Categoria = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem_Registrar_Cliente = new javax.swing.JMenuItem();
+        jMenuItem_Gestionar_Cliente = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem_Registrar_Venta = new javax.swing.JMenuItem();
+        jMenuItem_Gestionar_Venta = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
-        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItem_Reporte_Categorias = new javax.swing.JMenuItem();
+        jMenuItem_Reporte_Clientes = new javax.swing.JMenuItem();
+        jMenuItem_Reporte_Inventario = new javax.swing.JMenuItem();
+        jMenuItem_Reporte_Ventas = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
-        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem_Reporte_Historial = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
-        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem_Cerrar_Sesion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,121 +67,126 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         jMenu1.setText("Usuario");
         jMenu1.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem1.setText("Nuevo usuario");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Nuevo_Usuario.setText("Nuevo usuario");
+        jMenuItem_Nuevo_Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem_Nuevo_UsuarioActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jMenuItem_Nuevo_Usuario);
 
-        jMenuItem2.setText("Gestión de usuarios");
-        jMenu1.add(jMenuItem2);
+        jMenuItem_Gestionar_Usuario.setText("Gestión de usuarios");
+        jMenu1.add(jMenuItem_Gestionar_Usuario);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Inventario");
         jMenu2.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem3.setText("Ingresar productos");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Ingresar_Producto.setText("Ingresar productos");
+        jMenuItem_Ingresar_Producto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItem_Ingresar_ProductoActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenu2.add(jMenuItem_Ingresar_Producto);
 
-        jMenuItem4.setText("Gestión de productos");
-        jMenu2.add(jMenuItem4);
+        jMenuItem_Gestion_Productos.setText("Gestión de productos");
+        jMenu2.add(jMenuItem_Gestion_Productos);
 
-        jMenuItem5.setText("Actualizar stock");
-        jMenu2.add(jMenuItem5);
+        jMenuItem_Actualizar_Stock.setText("Actualizar stock");
+        jMenu2.add(jMenuItem_Actualizar_Stock);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Categorías");
         jMenu3.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem8.setText("Ingresar categoría");
-        jMenu3.add(jMenuItem8);
+        jMenuItem_Ingresar_Categoria.setText("Ingresar categoría");
+        jMenuItem_Ingresar_Categoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_Ingresar_CategoriaActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem_Ingresar_Categoria);
 
-        jMenuItem9.setText("Gestionar categoría");
-        jMenu3.add(jMenuItem9);
+        jMenuItem_Gestionar_Categoria.setText("Gestionar categoría");
+        jMenu3.add(jMenuItem_Gestionar_Categoria);
 
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Clientes");
         jMenu4.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem6.setText("Registrar cliente");
-        jMenu4.add(jMenuItem6);
+        jMenuItem_Registrar_Cliente.setText("Registrar cliente");
+        jMenu4.add(jMenuItem_Registrar_Cliente);
 
-        jMenuItem7.setText("Gestionar cliente");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Gestionar_Cliente.setText("Gestionar cliente");
+        jMenuItem_Gestionar_Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                jMenuItem_Gestionar_ClienteActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem7);
+        jMenu4.add(jMenuItem_Gestionar_Cliente);
 
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Ventas");
         jMenu5.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem10.setText("Registrar venta");
-        jMenu5.add(jMenuItem10);
+        jMenuItem_Registrar_Venta.setText("Registrar venta");
+        jMenu5.add(jMenuItem_Registrar_Venta);
 
-        jMenuItem11.setText("Gestionar venta");
-        jMenu5.add(jMenuItem11);
+        jMenuItem_Gestionar_Venta.setText("Gestionar venta");
+        jMenu5.add(jMenuItem_Gestionar_Venta);
 
         jMenuBar1.add(jMenu5);
 
         jMenu6.setText("Reportes");
         jMenu6.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem12.setText("Categorías");
-        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Reporte_Categorias.setText("Categorías");
+        jMenuItem_Reporte_Categorias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
+                jMenuItem_Reporte_CategoriasActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem12);
+        jMenu6.add(jMenuItem_Reporte_Categorias);
 
-        jMenuItem13.setText("Clientes");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Reporte_Clientes.setText("Clientes");
+        jMenuItem_Reporte_Clientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
+                jMenuItem_Reporte_ClientesActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem13);
+        jMenu6.add(jMenuItem_Reporte_Clientes);
 
-        jMenuItem14.setText("Inventario");
-        jMenu6.add(jMenuItem14);
+        jMenuItem_Reporte_Inventario.setText("Inventario");
+        jMenu6.add(jMenuItem_Reporte_Inventario);
 
-        jMenuItem15.setText("Ventas");
-        jMenu6.add(jMenuItem15);
+        jMenuItem_Reporte_Ventas.setText("Ventas");
+        jMenu6.add(jMenuItem_Reporte_Ventas);
 
         jMenuBar1.add(jMenu6);
 
         jMenu7.setText("Historial");
         jMenu7.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem16.setText("Historial");
-        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem_Reporte_Historial.setText("Historial");
+        jMenuItem_Reporte_Historial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem16ActionPerformed(evt);
+                jMenuItem_Reporte_HistorialActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem16);
+        jMenu7.add(jMenuItem_Reporte_Historial);
 
         jMenuBar1.add(jMenu7);
 
         jMenu8.setText("Cerrar Sesión");
         jMenu8.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jMenuItem17.setText("Cerrar sesión");
-        jMenu8.add(jMenuItem17);
+        jMenuItem_Cerrar_Sesion.setText("Cerrar sesión");
+        jMenu8.add(jMenuItem_Cerrar_Sesion);
 
         jMenuBar1.add(jMenu8);
 
@@ -179,29 +195,39 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItem_Nuevo_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Nuevo_UsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItem_Nuevo_UsuarioActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItem_Ingresar_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Ingresar_ProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItem_Ingresar_ProductoActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void jMenuItem_Gestionar_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Gestionar_ClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_jMenuItem_Gestionar_ClienteActionPerformed
 
-    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+    private void jMenuItem_Reporte_CategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Reporte_CategoriasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
+    }//GEN-LAST:event_jMenuItem_Reporte_CategoriasActionPerformed
 
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+    private void jMenuItem_Reporte_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Reporte_ClientesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
+    }//GEN-LAST:event_jMenuItem_Reporte_ClientesActionPerformed
 
-    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+    private void jMenuItem_Reporte_HistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Reporte_HistorialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem16ActionPerformed
+    }//GEN-LAST:event_jMenuItem_Reporte_HistorialActionPerformed
+
+    private void jMenuItem_Ingresar_CategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Ingresar_CategoriaActionPerformed
+      
+        InternalFormCategoria internalFormCategoria = new InternalFormCategoria();
+        jDesktopPaneMenu.add(internalFormCategoria);
+        internalFormCategoria.setVisible(true);
+        
+        
+    
+    }//GEN-LAST:event_jMenuItem_Ingresar_CategoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,22 +274,22 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem16;
-    private javax.swing.JMenuItem jMenuItem17;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuItem_Actualizar_Stock;
+    private javax.swing.JMenuItem jMenuItem_Cerrar_Sesion;
+    private javax.swing.JMenuItem jMenuItem_Gestion_Productos;
+    private javax.swing.JMenuItem jMenuItem_Gestionar_Categoria;
+    private javax.swing.JMenuItem jMenuItem_Gestionar_Cliente;
+    private javax.swing.JMenuItem jMenuItem_Gestionar_Usuario;
+    private javax.swing.JMenuItem jMenuItem_Gestionar_Venta;
+    private javax.swing.JMenuItem jMenuItem_Ingresar_Categoria;
+    private javax.swing.JMenuItem jMenuItem_Ingresar_Producto;
+    private javax.swing.JMenuItem jMenuItem_Nuevo_Usuario;
+    private javax.swing.JMenuItem jMenuItem_Registrar_Cliente;
+    private javax.swing.JMenuItem jMenuItem_Registrar_Venta;
+    private javax.swing.JMenuItem jMenuItem_Reporte_Categorias;
+    private javax.swing.JMenuItem jMenuItem_Reporte_Clientes;
+    private javax.swing.JMenuItem jMenuItem_Reporte_Historial;
+    private javax.swing.JMenuItem jMenuItem_Reporte_Inventario;
+    private javax.swing.JMenuItem jMenuItem_Reporte_Ventas;
     // End of variables declaration//GEN-END:variables
 }
