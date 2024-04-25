@@ -111,6 +111,11 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         jMenu3.add(jMenuItem_Ingresar_Categoria);
 
         jMenuItem_Gestionar_Categoria.setText("Gestionar categoría");
+        jMenuItem_Gestionar_Categoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_Gestionar_CategoriaActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem_Gestionar_Categoria);
 
         jMenuBar1.add(jMenu3);
@@ -228,6 +233,14 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         
     
     }//GEN-LAST:event_jMenuItem_Ingresar_CategoriaActionPerformed
+
+    private void jMenuItem_Gestionar_CategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Gestionar_CategoriaActionPerformed
+        
+        InternalFormGestionarCategoria internalFormGestionarCategoria = new InternalFormGestionarCategoria();
+        jDesktopPaneMenu.add(internalFormGestionarCategoria);
+        internalFormGestionarCategoria.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItem_Gestionar_CategoriaActionPerformed
 
     /**
      * @param args the command line arguments
