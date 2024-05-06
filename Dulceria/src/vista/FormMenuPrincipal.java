@@ -205,7 +205,11 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem_Nuevo_UsuarioActionPerformed
 
     private void jMenuItem_Ingresar_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Ingresar_ProductoActionPerformed
-        // TODO add your handling code here:
+        
+        InternalFormProducto internalFormProducto = new InternalFormProducto();
+        jDesktopPaneMenu.add(internalFormProducto);
+        internalFormProducto.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem_Ingresar_ProductoActionPerformed
 
     private void jMenuItem_Gestionar_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Gestionar_ClienteActionPerformed
