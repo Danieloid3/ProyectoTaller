@@ -175,15 +175,17 @@
     <Component class="javax.swing.JComboBox" name="combobox_iva">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
+          <StringArray count="4">
             <StringItem index="0" value="Seleccione el IVA:"/>
             <StringItem index="1" value="5%"/>
             <StringItem index="2" value="19%"/>
             <StringItem index="3" value="Exento de IVA"/>
-            <StringItem index="4" value="D&#xed;a sin IVA"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="combobox_ivaActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -218,6 +220,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Guardar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_GuardarActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="160" y="250" width="90" height="30"/>

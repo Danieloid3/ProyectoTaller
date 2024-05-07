@@ -92,6 +92,11 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         jMenu2.add(jMenuItem_Ingresar_Producto);
 
         jMenuItem_Gestion_Productos.setText("Gestión de productos");
+        jMenuItem_Gestion_Productos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_Gestion_ProductosActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem_Gestion_Productos);
 
         jMenuItem_Actualizar_Stock.setText("Actualizar stock");
@@ -245,6 +250,13 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         internalFormGestionarCategoria.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem_Gestionar_CategoriaActionPerformed
+
+    private void jMenuItem_Gestion_ProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Gestion_ProductosActionPerformed
+        // TODO add your handling code here:
+        InterGestionarProducto interGestionarProducto = new InterGestionarProducto();
+        jDesktopPaneMenu.add(interGestionarProducto);
+        interGestionarProducto.setVisible(true);
+    }//GEN-LAST:event_jMenuItem_Gestion_ProductosActionPerformed
 
     /**
      * @param args the command line arguments
